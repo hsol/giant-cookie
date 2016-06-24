@@ -35,6 +35,19 @@ window.GiantCookie = function(config) {
             key, '=', '',
             '; expires=' + t
         ].join('');
+
+        var cookies = document.cookie ? document.cookie.split('; ') : [];
+        for (i = 0; i < cookies.length; i++) {
+            var parts = cookies[i].split('='),
+                name = decode(parts.shift()),
+                cookie = parts.join('=');
+            if (key === name.substring(name.indexOf(name.split("_")[1]))) {
+                document.cookie = [
+                    name, '=', '',
+                    '; expires=' + t
+                ].join('');
+            }
+        }
     };
 
     _this.config = extend({json:true, max:4000, defaults:{}}, config);
