@@ -28,6 +28,12 @@ window.GiantCookie = function(config) {
         var value = _this.config.raw ? s : parseCookieValue(s);
         return isFunction(converter) ? converter(value) : value;
     }
+
+    /**
+     * 조건없이 쿠키 지우기
+     *
+     * @param string key
+     */
     var removeCookie = function(key) {
         var t = new Date();
         t.setMilliseconds(t.getMilliseconds() + (-1 * 864e+5))
@@ -37,7 +43,7 @@ window.GiantCookie = function(config) {
         ].join('');
 
         var cookies = document.cookie ? document.cookie.split('; ') : [];
-        for (i = 0; i < cookies.length; i++) {
+        for (var i = 0; i < cookies.length; i++) {
             var parts = cookies[i].split('='),
                 name = decode(parts.shift()),
                 cookie = parts.join('=');
@@ -51,6 +57,14 @@ window.GiantCookie = function(config) {
     };
 
     _this.config = extend({json:true, max:4000, defaults:{}}, config);
+
+    /**
+     * 조건과 함께 쿠키 지우기
+     *
+     * @param string key
+     * @param object value 없을 경우 read
+     * @param object option 없을 경우 read
+     */
     _this.cookie = function (key, value, options) {
         var options = options || {};
         var cookies = [];
@@ -59,7 +73,6 @@ window.GiantCookie = function(config) {
 
             var encodeKey = encode(key);
             var encodeValue = stringifyCookieValue(value);
-            options = extend(_this.config.defaults, options);
             if (typeof options.expires === 'number') {
                 var days = options.expires, t = options.expires = new Date();
                 t.setMilliseconds(t.getMilliseconds() + days * 864e+5);
@@ -116,6 +129,12 @@ window.GiantCookie = function(config) {
 
         return Array.isArray(result) ? (result.length > 0 ? result : "") : result;
     };
+
+    /**
+     * 조건과 함께 쿠키 지우기
+     *
+     * @param string key
+     */
     _this.removeCookie = function (key, options) {
         var options = options || {};
         if(typeof _this.cookie(key) === "object" || _this.cookie(key).length > _this.config.max) {
