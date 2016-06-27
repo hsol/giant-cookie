@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta property="og:title" content="Giant Cookie"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:url" content="http://hsol.github.io/giant-cookie">
+    <meta property="og:description" content="Split the cookie to stack larger data"/>
+    <meta property="og:image" content="https://s32.postimg.org/qeym2t17p/640x640.jpg"/>
+    <meta property="og:image:width" content="640"/>
+    <meta property="og:image:height" content="640"/>
+    <meta name="keywords" itemprop="keywords" content=“big cookie, large cookie, cookie, split cookie, cookie monster
+    " />
+    <title>giant-cookie example</title>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="./js/giant-cookie.js"></script>
+    <style>
+        header, section, article, footer {
+            display: block;
+        }
+
+        * {
+            font-size: 14pt;
+            font-family: 'Titillium Web', sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #FFF;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 1em;
+            color: #FFF;
+        }
+
+        a {
+            color: #FFF;
+        }
+
+        body {
+            background-size: cover;
+            background: url("./images/background.jpg");
+            text-align: center;
+        }
+
+        input[type=text] {
+            padding: 0.5em 1em 0.5em 1em;
+        }
+
+        .head_holder {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            text-align: left;
+            padding: 0.5em 1em 0.5em 1em;
+
+            background-color: #0F0F0F;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #FFF;
+        }
+
+        .head_holder a {
+            color: #FFF;
+            text-decoration: none;
+        }
+
+        .panel {
+            padding-left: 0.5em;
+            padding-right: 0.5em;
+        }
+
+        section.article {
+            width: 100%;
+            max-width: 35em;
+            margin: 0 auto;
+        }
+
+        section.article input {
+            width: 100%;
+            display: block;
+        }
+
+        section.article .input_button {
+            width: 100%;
+            font-size: 1.2em;
+            padding: 0.5em 1em 0.5em 1em;
+            margin-bottom: 1em;
+            background-color: #FFF;
+            box-shadow: none;
+            border: 1px solid #4aa3df;
+            color: #4aa3df;
+            font-weight: bold;
+        }
+
+        section.article .input_button:hover {
+            cursor: pointer;
+        }
+
+        textarea {
+            width: 100%;
+            height:8em;
+            max-width: 35em;
+            padding: 0.5em 1em 0.5em 1em;
+        }
+    </style>
+</head>
+<body>
+<header class="head_holder"><a href="https://github.com/hsol/giant-cookie">< back to GitHub</a></header>
+<section class="panel">
+    <header><h1>giant-cookie example</h1></header>
+    <section id="set" class="article">
+        <input type="text" name="key" value="testObject" placeholder="Insert key">
+        <textarea placeholder="Insert data">[{_string:"string-data", _integer: 0, _boolean:true, _object:{objectData:0}, _array:[0,1,2,3,4]},{_string:"string-data", _integer: 0, _boolean:true, _object:{objectData:0}, _array:[0,1,2,3,4]},{_string:"string-data", _integer: 0, _boolean:true, _object:{objectData:0}, _array:[0,1,2,3,4]},{_string:"string-data", _integer: 0, _boolean:true, _object:{objectData:0}, _array:[0,1,2,3,4]},{_string:"string-data", _integer: 0, _boolean:true, _object:{objectData:0}, _array:[0,1,2,3,4]},{_string:"string-data", _integer: 0, _boolean:true, _object:{objectData:0}, _array:[0,1,2,3,4]},{_string:"string-data", _integer: 0, _boolean:true, _object:{objectData:0}, _array:[0,1,2,3,4]},{_string:"string-data", _integer: 0, _boolean:true, _object:{objectData:0}, _array:[0,1,2,3,4]},{_string:"string-data", _integer: 0, _boolean:true, _object:{objectData:0}, _array:[0,1,2,3,4]},{_string:"string-data", _integer: 0, _boolean:true, _object:{objectData:0}, _array:[0,1,2,3,4]},{_string:"string-data", _integer: 0, _boolean:true, _object:{objectData:0}, _array:[0,1,2,3,4]},{_string:"string-data", _integer: 0, _boolean:true, _object:{objectData:0}, _array:[0,1,2,3,4]},{_string:"string-data", _integer: 0, _boolean:true, _object:{objectData:0}, _array:[0,1,2,3,4]},{_string:"string-data", _integer: 0, _boolean:true, _object:{objectData:0}, _array:[0,1,2,3,4]},{_string:"string-data", _integer: 0, _boolean:true, _object:{objectData:0}, _array:[0,1,2,3,4]},{_string:"string-data", _integer: 0, _boolean:true, _object:{objectData:0}, _array:[0,1,2,3,4]},{_string:"string-data", _integer: 0, _boolean:true, _object:{objectData:0}, _array:[0,1,2,3,4]},{_string:"string-data", _integer: 0, _boolean:true, _object:{objectData:0}, _array:[0,1,2,3,4]},{_string:"string-data", _integer: 0, _boolean:true, _object:{objectData:0}, _array:[0,1,2,3,4]},{_string:"string-data", _integer: 0, _boolean:true, _object:{objectData:0}, _array:[0,1,2,3,4]},{_string:"string-data", _integer: 0, _boolean:true, _object:{objectData:0}, _array:[0,1,2,3,4]},{_string:"string-data", _integer: 0, _boolean:true, _object:{objectData:0}, _array:[0,1,2,3,4]},{_string:"string-data", _integer: 0, _boolean:true, _object:{objectData:0}, _array:[0,1,2,3,4]},{_string:"string-data", _integer: 0, _boolean:true, _object:{objectData:0}, _array:[0,1,2,3,4]},{_string:"string-data", _integer: 0, _boolean:true, _object:{objectData:0}, _array:[0,1,2,3,4]},{_string:"string-data", _integer: 0, _boolean:true, _object:{objectData:0}, _array:[0,1,2,3,4]},{_string:"string-data", _integer: 0, _boolean:true, _object:{objectData:0}, _array:[0,1,2,3,4]},{_string:"string-data", _integer: 0, _boolean:true, _object:{objectData:0}, _array:[0,1,2,3,4]},{_string:"string-data", _integer: 0, _boolean:true, _object:{objectData:0}, _array:[0,1,2,3,4]},{_string:"string-data", _integer: 0, _boolean:true, _object:{objectData:0}, _array:[0,1,2,3,4]},{_string:"string-data", _integer: 0, _boolean:true, _object:{objectData:0}, _array:[0,1,2,3,4]},{_string:"string-data", _integer: 0, _boolean:true, _object:{objectData:0}, _array:[0,1,2,3,4]}]</textarea>
+        <input type="button" class="input_button" value="set cookie data" onclick="setCookie()">
+    </section>
+    <section id="get" class="article">
+        <input type="text" name="key" value="testObject" placeholder="Insert key">
+        <input type="button" class="input_button" value="get cookie data" onclick="getCookie()">
+    </section>
+    <section id="remove" class="article">
+        <input type="text" name="key" value="testObject" placeholder="Insert key">
+        <input type="button" class="input_button" value="remove cookie data" onclick="removeCookie()">
+    </section>
+</section>
+<footer><h2>Copyright 2016. <a href="https://github.com/hsol">HansolLim</a> all rights reserved.</h2></footer>
+<script>
+    window.onload = function (event) {
+        window.GC = new GiantCookie();
+        verticalCenter();
+    };
+    window.onresize = function (event) {
+        verticalCenter();
+    };
+
+    function verticalCenter() {
+        document.getElementsByClassName("panel")[0].style.marginTop = (window.innerHeight - document.getElementsByClassName("panel")[0].clientHeight) / 2 + "px";
+    }
+    function setCookie() {
+        var key = document.querySelector("#set [name=key]").value,
+                data = document.querySelector("#set textarea").value;
+
+        try {
+            data = JSON.parse(data);
+        } catch (e) { }
+
+        GC.cookie(key, data);
+        alert("Cookie set.");
+    }
+    function getCookie() {
+        var key = document.querySelector("#get [name=key]").value;
+
+        alert(GC.cookie(key));
+        console.log(document.cookie);
+    }
+    function removeCookie() {
+        var key = document.querySelector("#remove [name=key]").value;
+        GC.removeCookie(key);
+
+        alert("Cookie removed.");
+        console.log(document.cookie);
+    }
+</script>
+</body>
+</html>
