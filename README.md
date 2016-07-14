@@ -1,3 +1,4 @@
+![cookie monster](https://s32.postimg.org/q8l8q9jj9/smart_cookie_jar_clipart_cookie_monster_clip_art.png)
 # giant-cookie
 Makes available a cookie larger
 
