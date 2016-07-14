@@ -57,7 +57,7 @@ window.GiantCookie = function(config) {
         }
     };
 
-    _this.config = extend({json:true, max:4000, defaults:{}}, config);
+    _this.config = extend({json:true, max:4000}, config);
 
     /**
      * 조건과 함께 쿠키 생성, 조회
