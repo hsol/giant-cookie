@@ -3,6 +3,8 @@ Makes available a cookie larger
 
 This library methods are based on [jquery.cookie](https://github.com/carhartl/jquery-cookie).
 
+Example on: [http://hsol.github.io/giant-cookie](http://hsol.github.io/giant-cookie)
+
 　
 
 **Init giant-cookie**
