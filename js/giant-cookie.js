@@ -31,6 +31,7 @@ window.GiantCookie = function(config) {
 
     /**
      * 조건없이 쿠키 지우기
+     * remove cookie without option
      *
      * @param string key
      */
@@ -59,7 +60,8 @@ window.GiantCookie = function(config) {
     _this.config = extend({json:true, max:4000, defaults:{}}, config);
 
     /**
-     * 조건과 함께 쿠키 지우기
+     * 조건과 함께 쿠키 생성, 조회
+     * set cookie with option and get cookie
      *
      * @param string key
      * @param object value 없을 경우 read
@@ -131,18 +133,18 @@ window.GiantCookie = function(config) {
     };
 
     /**
-     * 조건과 함께 쿠키 지우기
+     * 쿠키 지우기
+     * remove cookie
      *
      * @param string key
      */
-    _this.removeCookie = function (key, options) {
-        var options = options || {};
+    _this.removeCookie = function (key) {
         if(typeof _this.cookie(key) === "object" || _this.cookie(key).length > _this.config.max) {
             for(var idx = 0; _this.cookie("@"+idx+"_"+key) != ""; idx++) {
-                _this.cookie(("@"+idx+"_"+key), null, extend(options, { expires: -1 }));
+                _this.cookie(("@"+idx+"_"+key), null, { expires: -1 });
             }
         } else {
-            _this.cookie(key, null, extend(options, { expires: -1 }));
+            _this.cookie(key, null, { expires: -1 });
         }
         return !_this.cookie(key);
     };
